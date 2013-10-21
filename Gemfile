@@ -8,7 +8,6 @@ group :assets do
   gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
   gem 'sass-rails', '~> 4.0.0'
   gem 'coffee-rails', '~> 4.0.0'
-  gem 'compass-rails'
   gem 'font-awesome-rails'
   gem 'jquery-rails'
   gem 'therubyracer', platforms: :ruby
@@ -21,6 +20,7 @@ group :development do
   gem 'better_errors'
   # gem 'capistrano'
   gem 'binding_of_caller', :platforms => [:mri_19, :rbx]
+  gem 'haml-rails'
 end
 
 group :test do
