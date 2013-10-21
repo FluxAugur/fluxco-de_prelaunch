@@ -20,14 +20,21 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   # gem 'capistrano'
+  gem 'binding_of_caller', :platforms => [:mri_19, :rbx]
 end
 
 group :test do
   gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'cucumber-rails', :require => false
+  gem 'launchy'
+  gem 'capybara'
 end
 
 group :development, :test do
   # gem 'debugger'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :doc do
@@ -42,3 +49,4 @@ gem 'jbuilder', '~> 1.2'
 gem 'figaro'
 gem 'high_voltage'
 gem 'simple_form', '>= 3.0.0.rc'
+gem 'gibbon'
