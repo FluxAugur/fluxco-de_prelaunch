@@ -1,0 +1,14 @@
+FLUXCO_DE_PRELAUNCH_VERSION=0.0.0
+
+usage() {
+  echo "usage: git hf version"
+}
+
+cmd_default() {
+  echo "$FLUXCO_DE_PRELAUNCH_VERSION"
+}
+
+cmd_help() {
+  usage
+  exit 0
+}

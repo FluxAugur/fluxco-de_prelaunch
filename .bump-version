@@ -1,0 +1,18 @@
+#!/bin/sh
+usage() {
+  echo "usage: bump-version <version-id>"
+}
+
+if [ $# -ne 1 ]; then
+  usage
+  exit 1
+fi
+
+if ! sed 's/^FLUXCO_DE_PRELAUNCH_VERSION=.$/FLUXCO_DE_PRELAUNCH_VERSION='$1'/g' fluxco_de_prelaunch_version > .fluxco_de_prelaunch_version.new; then
+  echo "Could not replace FLUXCO_DE_PRELAUNCH_VERSION variable." >&2
+  exit 2
+fi
+
+mv .fluxco_de_prelaunch_version.new fluxco_de_prelaunch_version
+git add fluxco_de_prelaunch_version
+git commit -m "Bumped version number to $1" fluxco_de_prelaunch_version
