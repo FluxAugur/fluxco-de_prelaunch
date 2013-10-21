@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-FluxcoDePrelaunch::Application.config.secret_key_base = 'f87710d1a1ddc9bbc315db5d9e2c2435ae237f5b80185ecea3f58bff5397ae7ef4dc4defb3b95eebbff851e9597880212378fdbee72a6ed46b3a062148866c7f'
+FluxcoDePrelaunch::Application.config.secret_key_base = ENV['FLUXCO_DE_APP_SECRET']
